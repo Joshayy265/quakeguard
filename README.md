@@ -54,17 +54,21 @@ QuakeGuard is a **machine-learning powered earthquake response simulation dashbo
 ## 2. Quick Start
 
 ```bash
-# Step 1: Install dependencies
+# Step 1: Clone
+git clone https://github.com/Joshayy265/quakeguard.git
+cd quakeguard
+
+# Step 2: Install dependencies
 pip install -r requirements.txt
 
-# Step 2 (optional): Retrain upgraded models
+# Step 3 (optional): Retrain upgraded models
 python models.py
 
-# Step 3: Launch
+# Step 4: Launch
 streamlit run app.py
 ```
 
-> **Note**: The .pkl files bundled in the zip were trained with scikit-learn 1.6.1.
+> **Note**: The `.pkl` files committed to this repo were trained with scikit-learn 1.6.1.
 > Running `python models.py` will retrain them with your installed version and eliminate the InconsistentVersionWarning.
 
 ---
@@ -758,12 +762,13 @@ A: `predict_proba()` returns the model's estimated probability for each class. W
 ## 10. File Structure
 
 ```
-quakeguard_v3/
+quakeguard/
 ├── app.py                  # Main Streamlit dashboard (all UI + logic)
 ├── models.py               # Model training script (run to retrain)
 ├── data_simulation.py      # Synthetic data generation
 ├── requirements.txt        # Python dependencies with versions
 ├── README.md               # This document
+├── LICENSE                 # MIT
 │
 ├── earthquake_data.csv     # 1500-row earthquake training dataset
 ├── patient_data.csv        # 300-row patient training dataset
@@ -799,3 +804,9 @@ quakeguard_v3/
 - Multi-event mode: simulate aftershock sequences
 - Hospital routing: find nearest hospital with capacity for each critical patient
 - Export to PDF: generate a PDF incident report from current simulation state
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
