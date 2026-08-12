@@ -68,8 +68,10 @@ python models.py
 streamlit run app.py
 ```
 
-> **Note**: The `.pkl` files committed to this repo were trained with scikit-learn 1.6.1.
-> Running `python models.py` will retrain them with your installed version and eliminate the InconsistentVersionWarning.
+> **Note**: The `.pkl` files committed to this repo were trained with **scikit-learn 1.6.1**,
+> which `requirements.txt` now pins exactly. On any other version sklearn raises
+> `InconsistentVersionWarning` and may return invalid results.
+> To use a newer scikit-learn, unpin it and run `python models.py` to retrain against your installed version.
 
 ---
 

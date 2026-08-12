@@ -1,7 +1,10 @@
 streamlit>=1.32.0
 pandas>=2.0.0
 numpy>=1.24.0
-scikit-learn>=1.3.0
+# Pinned exactly: the committed *.pkl models were trained with 1.6.1.
+# Any other version raises InconsistentVersionWarning. Run `python models.py`
+# to retrain against a newer version.
+scikit-learn==1.6.1
 joblib>=1.3.0
 folium>=0.15.0
 streamlit-folium>=0.18.0
